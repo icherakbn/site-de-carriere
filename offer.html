@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" th:href="@{styles/offer.css}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.16.19/dist/css/uikit.min.css" />
+
+  <title>OFFERS</title>
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.16.19/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.16.19/dist/js/uikit-icons.min.js"></script>
+<div class="uk-position-top uk-position-z-index">
+  <nav class="uk-navbar-container"
+       uk-sticky="start: 0; animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent uk-light"
+  >
+
+    <div class="uk-container uk-container-expand">
+
+      <div class="uk-navbar" uk-navbar>
+
+        <div class="uk-navbar-left">
+
+          <ul class="uk-navbar-nav ">
+            <a class="uk-navbar-item uk-logo" href="home.html" aria-label="Back to Home" style="color: red;">OOREDOO</a>
+            <li class="uk-active uk-visible@m" uk-toggle="target: #offcanvas-nav-primary"><a href="home.html">Contact Us
+            </a></li>
+            <li class="uk-visible@m">
+              <a href="#">Offers <span uk-icon="chevron-down"></span></a>
+              <div class="uk-navbar-dropdown">
+                <ul class="uk-nav uk-navbar-dropdown-nav">
+                  <li class="uk-active"><a href="offer.html">Our Offers</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+
+        </div>
+
+
+        <!-- toogle icon visible only on phones -->
+        <div class="uk-navbar-right">
+          <!-- show only on medium screens & above -->
+          <ul class="uk-navbar-nav uk-visible@m">
+
+            <div class="uk-navbar-item" role="menuitem">
+              <a class="uk-icon" href="https://www.twitter.com/ooredoodz"><span uk-icon="twitter"></span></a>
+            </div>
+
+            <div class="uk-navbar-item" role="menuitem"><a class="uk-icon" href="https://www.facebook.com/OoredooDZ/"><span uk-icon="facebook"></span></a></div>
+
+
+            <div class="uk-navbar-item" role="menuitem">
+              <a class="uk-button uk-button-primary uk-icon" href="form.html">HIRE NOW<span uk-icon="arrow-right"></span>
+              </a></div>
+
+          </ul>
+        </div>     </div>
+    </div>
+    </div>
+  </nav>
+<div class="wrapper">
+  <h1>OUR OFFERS :</h1>
+
+
+  <div class="cols">
+    <div class="col" ontouchstart="this.classList.toggle('hover');">
+      <div class="container">
+        <div class="front" style="background-image: url(it.jpg)">
+          <div class="inner">
+            <p>IT Engineer</p>
+            <span>
+                        Programming and scripting<br>
+                        Cyber security<br>
+                        Collaboration and teamwork </span>
+          </div>
+        </div>
+        <div class="back">
+          <div class="inner">
+            <p> it's a professional who designs, develops, and maintains computer systems. <a href="it.html"> read more</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col" ontouchstart="this.classList.toggle('hover');">
+      <div class="container">
+        <div class="front" style="background-image: url(radio.jpg)">
+          <div class="inner">
+            <p>Radio Engineer</p>
+            <span>Signal Processing<br>
+                        Knowledge Broadcast Technologies<br>
+                        </span>
+          </div>
+        </div>
+        <div class="back">
+          <div class="inner">
+            <p> A radio engineer is responsible for maintaining radio communication systems.<a href="it.html"> read more</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col" ontouchstart="this.classList.toggle('hover');">
+      <div class="container">
+        <div class="front" style="background-image: url(sales.jpg)">
+          <div class="inner">
+            <p>Sales Supervisor</p>
+            <span>Communication and Interpersonal Skills<br>
+                        Negotiation and Influencing Skills<br></span>
+          </div>
+        </div>
+        <div class="back">
+          <div class="inner">
+            <p>Sales supervisor is responsible for overseeing and managing sales teams.<a href="it.html"> read more</a> </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col" ontouchstart="this.classList.toggle('hover');">
+      <div class="container">
+        <div class="front" style="background-image: url(trans.jpg)">
+          <div class="inner">
+            <p>Transmission Engineer</p>
+            <span>Network Security<br>Network Design and Configuration</span>
+
+          </div>
+        </div>
+        <div class="back">
+          <div class="inner">
+            <p> A transmission engineer is responsible for maintaining communication networks.<a href="it.html"> read more</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col" ontouchstart="this.classList.toggle('hover');">
+      <div class="container">
+        <div class="front" style="background-image: url(finance.jpg)">
+          <div class="inner">
+            <p>Finance Manager</p>
+            <span>Regulatory Compliance<br>
+                        Financial Analysis and Reporting<br>
+                        Communication and Presentation</span>
+          </div>
+        </div>
+        <div class="back">
+          <div class="inner">
+            <p>A finance manager oversees financial operations, budgeting, forecasting.<a href="it.html"> read more</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col" ontouchstart="this.classList.toggle('hover');">
+      <div class="container">
+        <div class="front" style="background-image: url(civil.jpg)">
+          <div class="inner">
+            <p>Civil Engineer</p>
+            <span>AutoCAD and Civil Engineering Software<br>
+
+                        Technical Knowledge</span>
+          </div>
+        </div>
+        <div class="back">
+          <div class="inner">
+            <p> A civil engineer is responsible for designing, planning, and overseeing the construction.<a href="it.html"> read more</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col" ontouchstart="this.classList.toggle('hover');">
+      <div class="container">
+        <div class="front" style="background-image: url(expert.jpg)">
+          <div class="inner">
+            <p>legal expert</p>
+            <span>Legal Knowledge <br>Ethical Conduct <br>Adaptability</span>
+          </div>
+        </div>
+        <div class="back">
+          <div class="inner">
+            <p>A legal expert provides comprehensive legal guidance and expertise, specializing in diverse areas of law.<a href="it.html"> read more</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col" ontouchstart="this.classList.toggle('hover');">
+      <div class="container">
+        <div class="front" style="background-image: url(aqui.jpg)">
+          <div class="inner">
+            <p>Senior acquisition</p>
+            <span>Financial acumen <br>Strong negotiation skills </span>
+          </div>
+        </div>
+        <div class="back">
+          <div class="inner">
+            <p>Experienced professional leading strategic acquisitions for business growth.<a href="it.html"> read more</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

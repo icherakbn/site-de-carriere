@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OOREDOO: ADD AN OFFER</title>
+  <link rel="stylesheet" th:href="@{styles/form.css}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.16.19/dist/css/uikit.min.css" />
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.16.19/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.16.19/dist/js/uikit-icons.min.js"></script>
+<div class="uk-position-top uk-position-z-index">
+  <nav class="uk-navbar-container" uk-sticky="start: 0; animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent uk-light"
+   style="background: linear-gradient(to right, rgba(30, 75, 115, 0.9), rgba(255, 255, 255, 0));">
+
+    <div class="uk-container uk-container-expand">
+
+      <div class="uk-navbar" uk-navbar>
+
+        <div class="uk-navbar-left">
+
+          <ul class="uk-navbar-nav ">
+            <a class="uk-navbar-item uk-logo" href="home.html" aria-label="Back to Home" style="color: red;">OOREDOO</a>
+            <li class="uk-active uk-visible@m" uk-toggle="target: #offcanvas-nav-primary"><a href="home.html">Contact Us
+            </a></li>
+            <li class="uk-visible@m">
+              <a href="#">Offers <span uk-icon="chevron-down"></span></a>
+              <div class="uk-navbar-dropdown">
+                <ul class="uk-nav uk-navbar-dropdown-nav">
+                  <li class="uk-active"><a href="offer.html">Our Offers</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- toogle icon visible only on phones -->
+        <div class="uk-navbar-right">
+          <!-- show only on medium screens & above -->
+          <ul class="uk-navbar-nav uk-visible@m">
+
+            <div class="uk-navbar-item" role="menuitem">
+              <a class="uk-icon" href="https://www.twitter.com/ooredoodz"><span uk-icon="twitter"></span></a>
+            </div>
+
+            <div class="uk-navbar-item" role="menuitem"><a class="uk-icon" href="https://www.facebook.com/OoredooDZ/"><span uk-icon="facebook"></span></a></div>
+
+
+            <div class="uk-navbar-item" role="menuitem">
+              <a class="uk-button uk-button-primary uk-icon" href="form.html">HIRE NOW<span uk-icon="arrow-right"></span>
+              </a></div>
+
+          </ul>
+        </div>
+      </div>
+      </nav>
+
+  <th:block th:if="${errors ==  null}">
+    <h1>No errors, success</h1>
+  </th:block>
+
+  <th:block th:if="${errors !=  null}">
+    <h1>errors</h1>
+  </th:block>
+<div class="main" style="background: linear-gradient(to right, rgba(30, 75, 115, 0.9), rgba(255, 255, 255, 0)) !important;">
+  <form class="person" method="post" th:action >
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div>
+      <label for="surname">Surname:</label>
+      <input type="text" id="surname" name="surname" required>
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div><label>Pick the offer you want:</label>
+      <div class="same">
+        <input type="radio" id="choice1" name="group" value="choice1">
+        <label for="choice1">IT Engineer</label>
+      </div>
+      <tr th:each="offer:${offerslist}">
+        <div class="same">
+          <input type="radio" th:id="${offer.id}" th:name="offre" th:value="${offer.id}">
+          <label th:text="${offer.name}"></label>
+        </div>
+      </tr>
+    </div>
+    <div>
+      <label for="file">Add your CV:</label>
+      <input type="file" id="file" name="file">
+    </div>
+    <div>
+      <input class="send" type="submit" value="Send">
+    </div>
+  </form>
+  <div><footer><center>&copy; Copyright 2023 Ooredoo</center></footer></div>
+</div>
+</div>
+</body>
+</html>

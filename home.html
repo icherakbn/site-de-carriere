@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ooredoo</title>
+    <link rel="stylesheet" th:href="@{styles/home.css}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.16.19/dist/css/uikit.min.css" />
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.16.19/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.16.19/dist/js/uikit-icons.min.js"></script>
+<div class="uk-position-top uk-position-z-index">
+    <nav class="uk-navbar-container"
+         uk-sticky="start: 0; animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent uk-light"
+    >
+
+        <div class="uk-container uk-container-expand">
+
+            <div class="uk-navbar" uk-navbar>
+
+                <div class="uk-navbar-left">
+
+                    <ul class="uk-navbar-nav ">
+                        <a class="uk-navbar-item uk-logo" href="home.html" aria-label="Back to Home" style="color: red;">OOREDOO</a>
+                        <li class="uk-active uk-visible@m" uk-toggle="target: #offcanvas-nav-primary"><a href="#">Contact Us
+                        </a></li>
+                        <li class="uk-visible@m">
+                            <a href="#">Offers <span uk-icon="chevron-down"></span></a>
+                            <div class="uk-navbar-dropdown">
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    <li class="uk-active"><a href="Offer.html">Our Offers</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+
+
+                <!-- toogle icon visible only on phones -->
+                <div class="uk-navbar-right">
+                    <!-- show only on medium screens & above -->
+                    <ul class="uk-navbar-nav uk-visible@m">
+
+                        <div class="uk-navbar-item" role="menuitem">
+                            <a class="uk-icon" href="https://www.twitter.com/ooredoodz" target="_blank"><span uk-icon="twitter"></span></a>
+                        </div>
+
+                        <div class="uk-navbar-item" role="menuitem"><a class="uk-icon" href="https://www.facebook.com/OoredooDZ/" target="_blank"><span uk-icon="facebook"></span></a></div>
+
+
+                        <div class="uk-navbar-item" role="menuitem">
+                            <a class="uk-button uk-button-primary uk-icon" href="sign.html">SignUP/IN <span uk-icon="arrow-right"></span>
+                            </a></div>
+
+                    </ul>
+
+                    <!--off-canvas btn show only on MOBILE -->
+                    <a class="uk-navbar-toggle uk-hidden@m" href="#" uk-toggle="target: #offcanvas-nav-primary">
+                        <span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Menu</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+</div>
+<!-- OFF-CANVAS NAVBAR (Trigger by hamburger btn)
+modes: push / slide / reveal /none
+-->
+<nav id="offcanvas-nav-primary" data-uk-offcanvas="overlay: true; mode: push; flip: true">
+    <!-- offcanvas setting  -->
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+        <!-- navbar content her -->
+        <!-- A - logo -->
+        <a class="uk-align-left-uk-logo" href="#">OOREDOO</a>
+        <!-- B - nav -->
+        <ul class="uk-nav-default uk-nav-parent-icon" uk-nav>
+            <li class="uk-active"><a href="#">More about us :</a></li>
+
+            <li class=""><a href="http://www.ooredoo.dz/Ooredoo/Algerie/particuliers" target="_blank">Click here</a></li>
+        </ul>
+        <!--C- contact us -->
+        <footer class="uk-margin-large-top">
+            <hr>
+            <span uk-icon="icon: phone"></span>
+            <a class="uk-link-text" href="#">0550 000 333</a>
+            <span uk-icon="icone : mail"></span>
+            <a class="uk-link-text" href="#">customer.service@ooredoo.dz</a>
+            <br>
+            <span uk-icon="icone : mail"></span>
+            <a class="uk-link-text" href="#">66, Route de Ouled Fayet Chéréga-Alger <b>ALGERIE</b></a>
+        </footer>
+    </div>
+</nav>
+
+<header id="hero-header">
+    <div class="uk-section-secondary">
+        <!-- change her the bg image + The overlay color/opacity/direction (under style="") -->
+        <div id="change-her-the-bg-image" class="uk-position-relative uk-background-norepeat uk-background-cover uk-background-center-center  uk-flex uk-flex-middle"
+             uk-parallax="bgx: 0,-100"
+             uk-height-viewport="offset-top: true"
+             style="background-image: url('ooredoo.jpg');">
+
+            <div id="hero_overlay" class="uk-overlay uk-position-cover" style="background: linear-gradient(to right, rgba(30, 75, 115, 0.9), rgba(255, 255, 255, 0)) !important;"></div>
+
+            <div class="uk-width-1-1 uk-position-z-index">
+                <!-- hero container -->
+                <div class="uk-container uk-container-large">
+                    <!-- Heading: Add margin top for h1 - like this the text looks more center v beacuse the navbar is transpernt -->
+                    <h1 class="uk-margin-small uk-margin-medium-top uk-width-large@m uk-text-left@m uk-text-center uk-h6 uk-heading-line" data-uk-parallax="opacity: 1,0;viewport: 0.95;media: @s">
+                        <!-- extra span for uk-heading-line -->
+                        <span> Ooredoo's career website serves as a platform to discover and explore exciting career opportunities within the organization.</span>
+                    </h1>
+                    <h2 class="uk-margin-small uk-text-left@m uk-text-center uk-heading-large "
+                        data-uk-parallax="y: 0,60;opacity: 1,0; easing: 0.8;viewport: 0.95;media: @s">
+                        Join our team
+                    </h2>
+                    <!-- Arrow: With link to #main section + uk-scroll="" for smooth scrolling + offset (Beacuse the nav is sticky)-->
+                    <div class="uk-margin uk-text-left@m uk-text-center" data-uk-parallax="y: 0,450;opacity: 1,0;easing: 0.3;target: .uk-section;">
+                        <a uk-icon="icon: arrow-down;ratio: 1.5" class="uk-icon-link uk-icon" href="#main" data-uk-scroll="offset: 100"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+<!-- Demo docs content -->
+<main id="main" class="uk-container uk-container-large uk-margin-top">
+    <div id="message"></div>
+    <button class="uk-button uk-margin uk-button-danger uk-margin-small-right" type="button" uk-toggle="target: #offcanvas-nav-primary">Contact Us</button>
+    <br>
+    <br>
+    <div class="uk-card uk-card-default uk-card-body">
+        <h1 class="uk-text-medium">Welcome to the World of Ooredoo</h1>
+        <p>Ooredoo is a telecommunications company that operates in several countries around the world. It provides a wide range of services including mobile and fixed-line telephony, internet, digital television, and corporate solutions. Ooredoo aims to connect people and businesses, enabling them to communicate and access information effortlessly.
+            <br>With a strong presence in the Middle East, North Africa, and Southeast Asia, Ooredoo has become a leading telecommunications provider in these regions. The company strives to deliver high-quality services, innovative solutions, and advanced technologies to meet the evolving needs of its customers.
+            <br>Ooredoo is committed to enhancing the digital experience for individuals and businesses alike. It offers reliable and high-speed internet connectivity, allowing users to browse the web, stream media, and stay connected through various devices. Ooredoo also provides mobile services, offering flexible plans, affordable rates, and a wide coverage area.
+            <br>Ooredoo's career website provides a platform for individuals to explore job opportunities within the company. It showcases a diverse range of career options across different departments such as technology, marketing, customer service, finance, and more. The website offers information about the company culture, employee benefits, and the application process.
+        </p>
+    </div>
+    <br>
+    <a uk-icon="icon: arrow-up;ratio: 1.5" class="uk-icon-link uk-icon" href="#top" uk-scroll="">Back to top</a>
+
+</main>
+<script src="home.js"></script>
+</body>
+</html>

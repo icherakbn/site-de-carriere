@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EDIT OFFERS</title>
+    <link rel="stylesheet" th:href="@{styles/list.css}">
+</head>
+<body>
+<div class="main">
+    <div class="navbar">
+        <div class="icon">
+            <h2 class="logo">OOREDOO</h2>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li><a href="adminoffers.html">OFFERS</a></li>
+                <li><a href="list.html">LIST</a></li>
+                <li><a href="home.html">LOUGOUT</a></li>
+            </ul>
+        </div>
+    </div>
+    <br><br>
+    <h1 style="color: white !important; text-align: center !important;">ADD AN OFFER</h1>
+    <th:block th:if="${errors !=  null}">
+        <h1 th:text="${errors}"></h1>
+    </th:block>
+
+
+    <div>
+        <form class="person" method="post" th:action="@{/addoffer}" enctype="multipart/form-data">
+            <div>
+                <label for="OfferName">Offer name:</label>
+                <input type="text" id="OfferName" name="name" required>
+            </div>
+            <div>
+                <label for="ReqSkills">Requested skills:</label>
+                <input type="text" id="ReqSkills" name="requested" rows="5" cols="40" required/>
+            </div>
+            <div>
+                <label for="Description">Description:</label>
+                <input type="text" id="Description" name="description" rows="5" cols="40" required/>
+
+            </div>
+
+
+            <div>
+                <input class="send" type="submit" value="Add">
+            </div>
+        </form>
+    </div>
+    <div style="background: linear-gradient(to right, rgba(28, 28, 28, 0.5), rgb(255, 255, 255));">
+        <h1 style="color: white !important; text-align: center !important;">DELETE AN OFFER</h1>
+        <form class="person" action="/deleteoffer" method="post" >
+            <div><label>Pick the offer you want to delete:</label>
+                <tr th:each="offer:${offerslist}">
+                    <div class="same">
+                        <input type="radio" th:id="${offer.id}" th:name="offre" th:value="${offer.id}">
+                        <label th:text="${offer.name}"></label>
+                    </div>
+                </tr>
+            </div>
+            <div>
+                <input class="send" type="submit" value="Delete">
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

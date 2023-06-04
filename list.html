@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LIST</title>
+  <link rel="stylesheet" th:href="@{styles/list.css}">
+</head>
+<body>
+<div class="main">
+  <div class="navbar">
+    <div class="icon">
+      <h2 class="logo">OOREDOO</h2>
+    </div>
+
+    <div class="menu">
+      <ul>
+        <li><a href="adminOffer.html">OFFERS</a></li>
+        <li><a href="list.html">LIST</a></li>
+        <li><a href="home.html">LOUGOUT</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="table-container">
+    <table id="infoTable">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Email</th>
+        <th>Offer</th>
+        <th>CV</th>
+        <th>Actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr th:each="Offer=${list}">
+        <td th:text="${Offer.name}"></td>
+        <td th:text="${Offer.surname}"></td>
+        <td th:text="${Offer.email}"></td>
+        <td th:text="${Offer.offer}"></td>
+        <td th:text="${Offer.CV}"></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</body>
+</html>
